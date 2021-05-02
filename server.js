@@ -22,7 +22,7 @@ app.get('/api/getUser', (req,res)=>{
 
 
 //connect to db with mongoose
-mongoose.connect(`mongodb+srv://admin:sss@cluster.tbuyv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`, {
+mongoose.connect(`mongodb+srv://${process.env.user}:${process.env.key}@cluster.tbuyv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
