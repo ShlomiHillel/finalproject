@@ -2,9 +2,13 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const path = require('path');
+
+
+
+
 app.use(cors());
 app.get('/api/getUser', (req,res)=>{
-    const user = 'Evgeni';
+    const user = 'Shlomihillel';
     res.json(user);
 })
 
