@@ -1,18 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import logo from '../logo.svg';
 import axios from 'axios';
-import useSound from 'use-sound';
-import boopS from '/public/pop.mp3';
-
-
-
 
 
 function User() {
   const [user, setUser] = useState(null)
-  const [playBoop] = useSound(boopS);
 
-  
   const getUser = async () =>{
     const data = await axios.get('api/getUser')
     setUser(data.data)
@@ -37,9 +30,7 @@ function User() {
         <p>
           {`Hello ${user}`}
         </p>
-        <button onClick={playBoop}>Play</button>;
-        <a
-          className="App-link"
+<a
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
