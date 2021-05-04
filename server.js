@@ -14,7 +14,7 @@ const port = 8000;
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(cors());
-app.use('/main', router)
+// app.use('/main', router)
 
 
 app.get('/', (req,res)=>{
