@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-// const router = require('./routes/bank.route');
+ const router = require('./routes/main.route');
 const path = require('path');
 const app = express();
 const port = 8000;
@@ -14,15 +14,18 @@ const port = 8000;
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(cors());
-app.get('/api/getUser', (req,res)=>{
-    const user = 'Shlomihillel';
+app.use('/main', router)
+
+
+app.get('/', (req,res)=>{
+    const user = 's';
     res.json(user);
 })
 
 
 
 //connect to db with mongoose
-mongoose.connect(`mongodb+srv://${process.env.user}:${process.env.key}@cluster.tbuyv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`, {
+mongoose.connect(`mongodb+srv://admin:${process.env.key}@cluster.tbuyv.mongodb.net/main?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
