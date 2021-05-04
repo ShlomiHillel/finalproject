@@ -17,7 +17,7 @@ app.use(cors());
 // app.use('/main', router)
 
 
-app.get('/', (req,res)=>{
+app.get('/api/getUser', (req,res)=>{
     const user = 's';
     res.json(user);
 })
