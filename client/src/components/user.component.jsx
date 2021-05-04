@@ -23,7 +23,7 @@ function User() {
       <header className="App-header">
         {/* Async script executes immediately and must be after any DOM elements used in callback. */}
       {/* <script
-      src= 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCWufpfrFns40pvzf1d2itHGbyM3OX9NIU&callback=initMap&libraries=&v=weekly'
+      src= 'https://maps.googleapis.com/maps/api/js?key=AIzaaaSyCWufpfrFns40pvzf1d2itHGbyM3OX9NIU&callback=initMap&libraries=&v=weekly'
       async
     ></script> */}
         <img src={logo} className="App-logo" alt="logo" />
