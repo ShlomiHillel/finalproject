@@ -11,6 +11,8 @@ const usersControler = require('../controllers/user.contorller');
 // PATCH method is used to apply partial modifications to a resource. // איתי אומר שלא משתמשים בזה
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
 
+
+//----------- user controler -----------
 router.get('/users/getUser', (req,res)=>{
    const user = 'sh';
    res.json(user);
@@ -18,7 +20,7 @@ router.get('/users/getUser', (req,res)=>{
 
 
 
-// user controler----------------
+//----------- user controler -----------
 router.post('/users/create', (req, res) => {
    console.log("create user");
    usersControler.createUser(req, res);    
