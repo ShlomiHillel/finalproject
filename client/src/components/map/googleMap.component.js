@@ -99,7 +99,7 @@ function Map() {
             }}
           >
             <div>
-              <p>Spotted {formatRelative(selected.time, new Date())}</p>
+              <p>event in{formatRelative(selected.time, new Date())}</p>
             </div>
           </InfoWindow>
         ) : null}
@@ -117,21 +117,16 @@ export default (Map)
 
 function Locate({ panTo }) {
     return (
-      <button
-        className="locate"
-        onClick={() => {
-          navigator.geolocation.getCurrentPosition(
+      <button className="locate"
+        onClick={() => {navigator.geolocation.getCurrentPosition(
             (position) => {
-              panTo({
-                lat: position.coords.latitude,
+              panTo({ lat: position.coords.latitude,
                 lng: position.coords.longitude,
-              });
-            },
-            () => null
+              });}, () => null
           );
         }}
       >
-        <img src="/compass.svg" alt="compass" />
+        <img src="/.svg" alt="compass" />
       </button>
     );
   }
