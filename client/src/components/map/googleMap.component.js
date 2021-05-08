@@ -31,6 +31,7 @@ const center = {
 const fraKey = 'AIzaSyCTwmmUbksAqfSEKLn9fR4oSVbBimBrXvk';
 
 
+
 //________________Map finction_______________//
 
 function Map() {
