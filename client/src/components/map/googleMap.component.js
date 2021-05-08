@@ -13,7 +13,7 @@ const libraries = ['places']
 const locZoom = 17;
 const mapContStyle = { 
   width: '45vw',
-  height: '67vh',
+  height: '69vh',
 };
 const options= {
     styles: [{'featureType': "administrative.country",

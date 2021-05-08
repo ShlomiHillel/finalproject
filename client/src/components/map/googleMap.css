@@ -9,6 +9,7 @@
 }
 .map{
     position: absolute;
+    margin: auto;
     
 }
 h2{
@@ -18,8 +19,35 @@ h2{
     color:#7158ad ;
 
 }
+.search {
+    position: absolute;
+    top: 1rem;
+    left: 20%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 400px;
+    z-index: 6;
+  }
+  
+  .search input {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    width: 80%;
+  }
 
-/* 
-const devKey = 'AIzaSyCVBthtEmWi0Ul8mejDQrBlOULXB1kTB3I';
-const myKey = 'AIzaSyCWufpfrFns40pvzf1d2itHGbyM3OX9NIU';  
- */
+.locate {
+    position: absolute;
+    top: 1rem;
+    left: 40%;
+    background: none;
+    border: none;
+    z-index: 5;
+  }
+
+.locate img {
+    width: 30px;
+    background: none;
+    border: none;
+    z-index: 6;
+  }
+
