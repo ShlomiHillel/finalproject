@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import logo from '../logo.svg';
+import logo from '../../logo.svg';
 import axios from 'axios';
 
 
@@ -7,7 +7,7 @@ function User() {
   const [user, setUser] = useState(null)
 
   const getUser = async () =>{
-    const data = await axios.get('main/users/getUser')
+    const data = await axios.get('main/welcome')
     setUser(data.data)
   }
 

@@ -1,0 +1,20 @@
+
+
+:root{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.map{
+    position: absolute;
+    
+}
+h2{
+    position: absolute;
+    left:1rem;
+    z-index: 5;
+    color:#7158ad ;
+
+}
