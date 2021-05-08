@@ -10,6 +10,7 @@ import {Combobox,ComboboxInput,ComboboxPopover,
 
 
 const libraries = ['places']
+const locZoom = 17;
 const mapContStyle = { 
   width: '45vw',
   height: '67vh',
@@ -60,7 +61,8 @@ function Map() {
 
   const panTo = useCallback(({ lat, lng }) => {
     mapRef.current.panTo({ lat, lng });
-    mapRef.current.setZoom(14);
+    mapRef.current.setZoom(locZoom);
+    // mapRef.current.setMarker();
   }, []);
 
   return (
@@ -99,7 +101,7 @@ function Map() {
             }}
           >
             <div>
-              <p>event in{formatRelative(selected.time, new Date())}</p>
+              <p>had event  {formatRelative(selected.time, new Date())}</p>
             </div>
           </InfoWindow>
         ) : null}
@@ -117,16 +119,22 @@ export default (Map)
 
 function Locate({ panTo }) {
     return (
-      <button className="locate"
-        onClick={() => {navigator.geolocation.getCurrentPosition(
+      <button
+        className="locate"
+        onClick={() => {
+          navigator.geolocation.getCurrentPosition(
             (position) => {
-              panTo({ lat: position.coords.latitude,
+              panTo({
+                lat: position.coords.latitude,
                 lng: position.coords.longitude,
-              });}, () => null
+                zoom: 2
+              });
+            },
+            () => null
           );
         }}
       >
-        <img src="/.svg" alt="compass" />
+        <img src="/compass.svg" alt="compass" />
       </button>
     );
   }
