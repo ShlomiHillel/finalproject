@@ -9,7 +9,10 @@ function App() {
 
   return (
     <div>
+      <navBar/>
+        
       <BrowserRouter>
+        
         <Route exact path='/' component={User} />
         <Route exact path='/map' component={map} />
       </BrowserRouter>
