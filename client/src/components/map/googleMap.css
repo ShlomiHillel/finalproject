@@ -7,10 +7,10 @@
     padding: 0;
     position: relative;
 }
-.map{
-    position: absolute;
-    margin: auto;
-    
+.mapCon{
+    position: relative;
+    /* margin: 5rem;
+    padding: 0; */
 }
 h2{
     position: absolute;
@@ -22,23 +22,23 @@ h2{
 .search {
     position: absolute;
     top: 1rem;
-    left: 20%;
+    left: 24%;
     transform: translateX(-50%);
-    width: 100%;
+    width: 90%;
     max-width: 400px;
-    z-index: 6;
+    z-index: 10;
   }
   
   .search input {
     padding: 0.5rem;
-    font-size: 1.5rem;
-    width: 80%;
+    font-size: 1.1rem;
+    width: 90%;
   }
 
 .locate {
     position: absolute;
     top: 1rem;
-    left: 40%;
+    left: 45%;
     background: none;
     border: none;
     z-index: 5;

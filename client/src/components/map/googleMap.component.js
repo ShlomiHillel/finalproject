@@ -12,31 +12,34 @@ import {Combobox,ComboboxInput,ComboboxPopover,
 const libraries = ['places']
 const locZoom = 17;
 const mapContStyle = { 
-  width: '45vw',
-  height: '69vh',
+  width: '50vw',
+  height: '73vh',
 };
-const options= {
+const center = { 
+    lat : 31.25321, 
+    lng : 34.786875
+};
+
+
+ const options= {
     styles: [{'featureType': "administrative.country",
             "elementType": "geometry",
             "stylers": [{"visibility": "simplified"},{"hue": "#ff0000"}]
         }],
         disableDefaultUI: true,
         zoomControl:true,
+        // mapTypeControl:true,
 
-}
-const center = { 
-        lat : 31.253883, 
-        lng : 34.785856
-    };
+ }
+
 
 const fraKey = 'AIzaSyCTwmmUbksAqfSEKLn9fR4oSVbBimBrXvk';
-
 
 
 //________________Map finction_______________//
 
 function Map() {
-    const [markers, setMarkers] = useState([]);
+  const [markers, setMarkers] = useState([]);
   const [selected, setSelected] = useState(null);
 
   const { isLoaded } = useJsApiLoader({
@@ -44,17 +47,20 @@ function Map() {
     googleMapsApiKey: fraKey,
     libraries,    
   })
+
   const onMapClick = useCallback((e) => {
     setMarkers((current) => [
       ...current,
-      {
-        lat: e.latLng.lat(),
+      { lat: e.latLng.lat(),
         lng: e.latLng.lng(),
         time: new Date(),
-      },
-    ]);
-  }, []);
+      }, 
+       ]); 
+     }, 
+     []);
+
   const mapRef = React.useRef();
+
   const onMapLoad = useCallback((map) => {
     mapRef.current = map;
   }, []);
@@ -62,7 +68,7 @@ function Map() {
   const panTo = useCallback(({ lat, lng }) => {
     mapRef.current.panTo({ lat, lng });
     mapRef.current.setZoom(locZoom);
-    // mapRef.current.setMarker();
+    // mapRef.current.setMarkers();
   }, []);
 
   return (
@@ -134,7 +140,7 @@ function Locate({ panTo }) {
           );
         }}
       >
-        <img src="/compass.svg" alt="compass" />
+        <img src='/greenHome.svg' alt='my location' />
       </button>
     );
   }
