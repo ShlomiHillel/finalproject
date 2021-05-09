@@ -12,21 +12,12 @@ function User() {
   }
 
   useEffect(() => {getUser()}, [])
-  // function initMap() {
-  //   map = new google.maps.Map(document.getElementById("App"), {
-  //     center: {lat: 31.249739085, lng:  34.7992617},
-  //     zoom: 16,
-  //   });
+  
   
   return (
     <div className="App">
       <header className="App-header">
-        {/* Async script executes immediately and must be after any DOM elements used in callback. */}
-      {/* <script
-      src= 'https://maps.googleapis.com/maps/api/js?key=AIzaaaSyCWufpfrFns40pvzf1d2itHGbyM3OX9NIU&callback=initMap&libraries=&v=weekly'
-      async
-    ></script> */}
-        <img src={logo} className="App-logo" alt="logo" />
+              <img src={logo} className="App-logo" alt="logo" />
         <p>
           {`Hello ${user}`}
         </p>
@@ -36,7 +27,7 @@ function User() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          the ruler!!
+         how is the ruler??
         </a>
       </header>
     </div>
